@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Push Docker Image
           command: |
-            echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" test.cogiot.net--password-stdin
+            echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" test.cogiot.net  --password-stdin
             docker push $IMAGE_NAME:latest
 workflows:
   version: 2
